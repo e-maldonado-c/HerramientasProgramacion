@@ -26,14 +26,13 @@ class BubbleSortAlgorithm():
 
             swapped = False
 
-            for j in range(0, n_elements - i + 1):
+            for j in range(0, n_elements - i - 1):
 
                 # Miramos si el número actual es mayor al que tiene después
-                if elements[j] != elements[j+1]:
+                if elements[j] > elements[j+1]:
                     
                     # Hacemos swap de los valores
-                    elements[j] = elements[j+1]
-                    elements[j+1] = elements[j]
+                    elements[j], elements[j+1] = elements[j+1], elements[j]
                     
                     # Indicamos que se ha hecho un cambio
                     swapped = True
